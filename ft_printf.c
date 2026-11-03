@@ -29,6 +29,8 @@ int ft_printf(const char *format, ...)
     int     count;
     int     result;
 
+    if (!format)
+        return (-1);
     i = 0;
     count = 0;
     va_start(args, format);
@@ -38,8 +40,6 @@ int ft_printf(const char *format, ...)
             result = ft_format(args, format[++i]);
         else
             result = ft_putchar(format[i]);
-        if (result == -1)
-            return (va_end(args), -1);
         count += result;
         i++;
     }
