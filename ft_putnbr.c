@@ -33,15 +33,15 @@ int	ft_putnbr(int n)
 int	ft_putunsigned(unsigned int n)
 {
 	int	count;
-    int ret;
+	int	ret;
 
 	count = 0;
 	if (n >= 10)
-    {
-        ret = ft_putunsigned(n / 10);
-        count += ret;
-    }
-    ret = ft_putchar((n % 10) + '0');
+	{
+		ret = ft_putunsigned(n / 10);
+		count += ret;
+	}
+	ret = ft_putchar((n % 10) + '0');
 	return (count + ret);
 }
 
