@@ -27,13 +27,9 @@ int	ft_putunsigned(unsigned int n)
 	if (n >= 10)
     {
         ret = ft_putunsigned(n / 10);
-        if (ret == -1)
-            return (-1);
         count += ret;
     }
     ret = ft_putchar((n % 10) + '0');
-	if (ret == -1)
-        return (-1);
 	return (count + ret);
 }
 
